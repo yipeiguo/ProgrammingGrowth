@@ -194,7 +194,7 @@ for intIndx = 1:numintervals
 
         prevData.cmat = cmat_half;    
         Ux_half = Vn_half.*cos(theta_half2-pi/2);
-        Vy_curr = Vn_half.*sin(theta_half2-pi/2);
+        Vy_half = Vn_half.*sin(theta_half2-pi/2);
         Znext_2s = Z_half2 + (Ux_half + 1i.*Vy_half).*(dt/2);
         [Znext_2s,Lnext_2s] = respaceZ(Znext_2s);
         
@@ -230,7 +230,7 @@ for intIndx = 1:numintervals
         
                 % calculate new 2-step Z:
                 Ux_half = Vn_half.*cos(theta_half2-pi/2);
-                Vy_curr = Vn_half.*sin(theta_half2-pi/2);
+                Vy_half = Vn_half.*sin(theta_half2-pi/2);
                 Znext_2s = Z_half2 + (Ux_half + 1i.*Vy_half).*(dt/2);
                 [Znext_2s,Lnext_2s] = respaceZ(Znext_2s);
         
